@@ -4,6 +4,7 @@ from django.test import TestCase
 from django.urls import reverse
 
 from phonebook.models import PhoneBook
+from phonebook.views import PhoneBookeList
 
 
 class CheckURL(TestCase):
@@ -29,6 +30,20 @@ class CheckSearch(TestCase):
         redirect_url = '/?search=М'
         response = self.client.get('/?search=М')
         self.check_redirect(response, redirect_url)
+
+    def test_query_filter_name(self):
+        book = PhoneBook.objects.all().filter(is_deleted=False)
+        p = PhoneBookeList()
+        search = "М"
+        data = p.query_filter(book, search)
+        self.assertIn(search, data.last().first_name)
+
+    def test_query_filter_number(self):
+        book = PhoneBook.objects.all().filter(is_deleted=False)
+        p = PhoneBookeList()
+        search = "774"
+        data = p.query_filter(book, search).last()
+        self.assertIn(search, data.numbers.all().first().number)
 
     def check_redirect(self, response, redirect_url):
         self.assertEqual(redirect_url, redirect_url)
