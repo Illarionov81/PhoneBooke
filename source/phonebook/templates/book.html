@@ -8,7 +8,6 @@
         {% endif %}
     </div>
         <div class="row  border text-center">
-            <div class="col-2 m-0 p-0 border">Аватарка</div>
             <div class="col  border">ФИО</div>
             <div class="col  border">Номера телефонов</div>
             <div class="col  border">Адресс</div>
@@ -16,15 +15,16 @@
         </div>
         {% for book in books %}
         <div class="row ">
-
-            <div class="col-2 m-0 p-0 border text-center ">{% if book.avatar %}
-                <a href="{{ book.avatar.url }}"><img src="{{ book.avatar.url }}" width="50%" alt="Аватарка"></a>
-            {% else %}Аватарка{% endif %}
-            </div>
             <div class="col  border">{{ book.first_name }} {{ book.patronymic }} {{ book.last_name }}</div>
             <div class="col border ">
                 {% for number in book.numbers.all %}
-                    <div class="row border justify-content-center "> {{  number.number }}</div>
+                    <div class="row border justify-content-center ">
+                        <div class="col">
+                            {{  number.number }}
+                        </div>
+                        <div class="col">
+                            -  {{ number.category.category }}
+                        </div> </div>
                 {% endfor %}
             </div>
             <div class="col  border">{{ book.address }}</div>
