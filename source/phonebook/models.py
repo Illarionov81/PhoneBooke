@@ -32,19 +32,8 @@ class PhoneBook(models.Model):
     patronymic = models.CharField(max_length=50, null=False, blank=False, verbose_name='Отчество')
     last_name = models.CharField(max_length=50, null=False, blank=False, verbose_name='Фамилия')
     birth_date = models.DateField(null=True, blank=True, verbose_name='Дата рождения')
-    avatar = models.ImageField(upload_to='admin_user_pic', null=True, blank=True, verbose_name='Аватар')
     address = models.CharField(max_length=200, verbose_name='Адрес')
     is_deleted = models.BooleanField(default=False)
-
-    def image_img(self):
-        if self.avatar:
-            from django.utils.safestring import mark_safe
-            return mark_safe(u'<a href="{0}" target="_blank"><img src="{0}" width="60"/></a>'.format(self.avatar.url))
-        else:
-            return '(Нет изображения)'
-
-    image_img.short_description = 'Аватарка'
-    image_img.allow_tags = True
 
     def numbers_num(self):
         if self.numbers.all():
