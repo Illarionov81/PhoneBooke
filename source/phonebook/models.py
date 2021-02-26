@@ -41,7 +41,7 @@ class PhoneBook(models.Model):
         else:
             return 'нет номера телефона'
 
-    numbers_num.short_description = 'Номер телефона'
+    numbers_num.short_description = '1й номер телефона'
     numbers_num.allow_tags = True
 
     def __str__(self):

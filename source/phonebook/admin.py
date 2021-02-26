@@ -15,7 +15,7 @@ class NumbersInline(admin.StackedInline):
 
 class PhoneBookAdmin(admin.ModelAdmin):
     list_display_links = ['id', 'first_name']
-    list_display = ['id', 'first_name', 'last_name', 'birth_date', 'address', 'numbers_num']
+    list_display = ['id', 'is_deleted', 'first_name', 'last_name', 'birth_date', 'address', 'numbers_num']
     list_filter = ['first_name']
     search_fields = ['first_name', 'patronymic', 'last_name']
     fields = ['first_name', 'patronymic', 'last_name', 'birth_date', 'address', 'is_deleted']
