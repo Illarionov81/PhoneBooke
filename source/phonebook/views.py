@@ -26,5 +26,8 @@ class PhoneBookeList(ListView):
         if form.is_valid():
             search = form.cleaned_data['search']
             if search:
-                data = data.filter(Q(first_name__icontains=search) | Q(numbers__number__icontains=search))
+                data = self.query_filter(data, search)
         return data
+
+    def query_filter(self, data, search):
+        return data.filter(Q(first_name__icontains=search) | Q(numbers__number__icontains=search)).distinct()
