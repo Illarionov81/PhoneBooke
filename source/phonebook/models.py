@@ -13,10 +13,10 @@ class Category(models.Model):
 
 
 class Numbers(models.Model):
-    category = models.ForeignKey('phonebook.Category', related_name='numbers', blank=True,
-                                 on_delete=models.SET_DEFAULT, default='', verbose_name='Категория')
-    number = models.CharField(max_length=25, null=True, blank=True, verbose_name='Номер')
-    phone_book = models.ForeignKey('phonebook.PhoneBook', null=True, blank=True, related_name='numbers',
+    category = models.ForeignKey('phonebook.Category', related_name='numbers', on_delete=models.PROTECT,
+                                 verbose_name='Категория')
+    number = models.CharField(max_length=25, verbose_name='Номер')
+    phone_book = models.ForeignKey('phonebook.PhoneBook', related_name='numbers',
                                    verbose_name='Чей номер', on_delete=models.CASCADE)
 
     def __str__(self):
