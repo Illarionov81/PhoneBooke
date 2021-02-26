@@ -9,7 +9,7 @@ def _(param):
 
 class MyUserInline(UserAdmin):
     exclude = []
-    list_display = ['image_img', "username", 'birth_date', ]
+    list_display = ['image_img', "username"]
     readonly_fields = ['image_img', ]
     list_display_links = ['username']
     fieldsets = (
