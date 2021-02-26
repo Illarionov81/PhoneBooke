@@ -1,4 +1,5 @@
 from django.core.management import call_command
+from django.http import HttpResponseNotFound
 from django.template.response import TemplateResponse
 from django.test import TestCase
 from django.urls import reverse
@@ -7,7 +8,7 @@ from phonebook.models import PhoneBook
 from phonebook.views import PhoneBookeList
 
 
-class CheckURL(TestCase):
+class CheckURLSuccess(TestCase):
     def test_get_url(self):
         redirect_url = reverse('book')
         response = self.client.get(reverse('book',))
@@ -17,6 +18,16 @@ class CheckURL(TestCase):
         self.assertEqual(response.status_code, 200)
         self.assertEqual(type(response), TemplateResponse)
         self.assertEqual('/', redirect_url)
+
+
+class CheckURLFail(TestCase):
+    def test_get_url(self):
+        response = self.client.get('book/2/',)
+        self.check_redirect(response)
+
+    def check_redirect(self, response):
+        self.assertEqual(response.status_code, 404)
+        self.assertEqual(type(response), HttpResponseNotFound)
 
 
 class CheckSearch(TestCase):
