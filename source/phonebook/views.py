@@ -13,4 +13,18 @@ class PhoneBookeList(ListView):
     paginate_by = 5
     paginate_orphans = 2
 
-# Create your views here.
+    def get_context_data(self, *, object_list=None, **kwargs):
+        form = SimpleSearchForm(data=self.request.GET)
+        if form.is_valid():
+            search = form.cleaned_data['search']
+            kwargs['search'] = search
+        return super().get_context_data(object_list=object_list, **kwargs)
+
+    def get_queryset(self):
+        data = PhoneBook.objects.all().filter(is_deleted=False)
+        form = SimpleSearchForm(data=self.request.GET)
+        if form.is_valid():
+            search = form.cleaned_data['search']
+            if search:
+                data = data.filter(Q(first_name__icontains=search) | Q(numbers__number__icontains=search))
+        return data
