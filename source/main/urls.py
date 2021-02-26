@@ -18,7 +18,9 @@ from django.contrib import admin
 from django.urls import path, include
 
 from main import settings
+from phonebook.views import PhoneBookeList
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('', PhoneBookeList.as_view(), name='book')
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
