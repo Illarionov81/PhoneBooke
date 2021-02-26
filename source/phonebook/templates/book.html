@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <div class="text-center">
+        <h1>Телефонный справочник.</h1>
+        {% if is_paginated %}
+            {% include 'partial/pagination.html' %}
+        {% endif %}
+    </div>
+        <div class="row  border">
+            <div class="col  border">ФИО</div>
+            <div class="col  border">Номера телефонов</div>
+            <div class="col  border">Адресс</div>
+            <div class="col  border">Дата рождения</div>
+        </div>
+        {% for book in books %}
+        <div class="row ">
+            <div class="col  border">{{ book.first_name }} {{ book.patronymic }} {{ book.last_name }}</div>
+            <div class="col border ">
+                {% for number in book.numbers.all %}
+                    <div class="row border justify-content-center "> {{  number.number }}</div>
+                {% endfor %}
+            </div>
+            <div class="col  border">{{ book.address }}</div>
+            <div class="col  border">{{ book.birth_date }}</div>
+        </div>
+            <br>
+        {% endfor %}
+
+{% endblock %}
+
