@@ -21,7 +21,7 @@ class PhoneBookeList(ListView):
         return super().get_context_data(object_list=object_list, **kwargs)
 
     def get_queryset(self):
-        data = PhoneBook.objects.all().filter(is_deleted=False)
+        data = PhoneBook.objects.all().filter(is_deleted=False).order_by('first_name')
         form = SimpleSearchForm(data=self.request.GET)
         if form.is_valid():
             search = form.cleaned_data['search']

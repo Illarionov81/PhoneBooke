@@ -80,6 +80,141 @@
   }
 },
 {
+  "model": "phonebook.numbers",
+  "pk": 6,
+  "fields": {
+    "category": 1,
+    "number": "+7996774568669",
+    "phone_book": 5
+  }
+},
+{
+  "model": "phonebook.numbers",
+  "pk": 7,
+  "fields": {
+    "category": 3,
+    "number": "0311 25869",
+    "phone_book": 6
+  }
+},
+{
+  "model": "phonebook.numbers",
+  "pk": 8,
+  "fields": {
+    "category": 1,
+    "number": "0775 556 889",
+    "phone_book": 7
+  }
+},
+{
+  "model": "phonebook.numbers",
+  "pk": 9,
+  "fields": {
+    "category": 2,
+    "number": "+99658847875",
+    "phone_book": 7
+  }
+},
+{
+  "model": "phonebook.numbers",
+  "pk": 10,
+  "fields": {
+    "category": 3,
+    "number": "0333055585",
+    "phone_book": 7
+  }
+},
+{
+  "model": "phonebook.numbers",
+  "pk": 11,
+  "fields": {
+    "category": 4,
+    "number": "+996 315 256 25",
+    "phone_book": 8
+  }
+},
+{
+  "model": "phonebook.numbers",
+  "pk": 12,
+  "fields": {
+    "category": 5,
+    "number": "+99656585",
+    "phone_book": 9
+  }
+},
+{
+  "model": "phonebook.numbers",
+  "pk": 13,
+  "fields": {
+    "category": 1,
+    "number": "+69925522555",
+    "phone_book": 9
+  }
+},
+{
+  "model": "phonebook.numbers",
+  "pk": 14,
+  "fields": {
+    "category": 1,
+    "number": "+996255877",
+    "phone_book": 10
+  }
+},
+{
+  "model": "phonebook.numbers",
+  "pk": 15,
+  "fields": {
+    "category": 3,
+    "number": "+996 250 125",
+    "phone_book": 11
+  }
+},
+{
+  "model": "phonebook.numbers",
+  "pk": 16,
+  "fields": {
+    "category": 4,
+    "number": "0775698568",
+    "phone_book": 12
+  }
+},
+{
+  "model": "phonebook.numbers",
+  "pk": 17,
+  "fields": {
+    "category": 3,
+    "number": "031525668",
+    "phone_book": 13
+  }
+},
+{
+  "model": "phonebook.numbers",
+  "pk": 18,
+  "fields": {
+    "category": 1,
+    "number": "+996789658552",
+    "phone_book": 14
+  }
+},
+{
+  "model": "phonebook.numbers",
+  "pk": 19,
+  "fields": {
+    "category": 2,
+    "number": "+99631258654",
+    "phone_book": 14
+  }
+},
+{
+  "model": "phonebook.numbers",
+  "pk": 20,
+  "fields": {
+    "category": 3,
+    "number": "031258695",
+    "phone_book": 14
+  }
+},
+{
   "model": "phonebook.phonebook",
   "pk": 3,
   "fields": {
@@ -88,7 +223,7 @@
     "last_name": "\u0420\u043e\u043c\u0430\u043d\u043e\u0432",
     "birth_date": "2001-02-16",
     "avatar": "admin_user_pic/man_9etnHxP.jpg",
-    "address": "Bishkek 4 dictrict",
+    "address": "\u041a\u044b\u0440\u0433\u044b\u0437\u0441\u0442\u0430\u043d  \u0433. \u0411\u0438\u0448\u043a\u0435\u043a 4 \u043c\u0438\u043a\u0440\u043e\u0440\u0430\u0439\u043e\u043d \u0434\u043e\u043c 29 \u043a\u0432\u0430\u0440\u0442\u0438\u0440\u0430 12",
     "is_deleted": false
   }
 },
@@ -102,6 +237,136 @@
     "birth_date": "1998-02-09",
     "avatar": "admin_user_pic/\u0431\u043e\u043a\u0441_FW41AHB.jpg",
     "address": "\u0421\u0443\u043a\u0443\u043b\u0443\u043a \u04345",
+    "is_deleted": false
+  }
+},
+{
+  "model": "phonebook.phonebook",
+  "pk": 5,
+  "fields": {
+    "first_name": "\u0410\u043b\u0435\u043a\u0441\u0430\u043d\u0434\u0440",
+    "patronymic": "\u0418",
+    "last_name": "\u0418",
+    "birth_date": null,
+    "avatar": "",
+    "address": "\u041a\u044b\u0440\u0433\u044b\u0437\u0441\u0442\u0430\u043d  \u0433. \u0411\u0438\u0448\u043a\u0435\u043a 6 \u043c\u0438\u043a\u0440\u043e\u0440\u0430\u0439\u043e\u043d \u0434\u043e\u043c 29 \u043a\u0432\u0430\u0440\u0442\u0438\u0440\u0430 12",
+    "is_deleted": false
+  }
+},
+{
+  "model": "phonebook.phonebook",
+  "pk": 6,
+  "fields": {
+    "first_name": "\u041c\u044d\u0440\u0438\u043c",
+    "patronymic": "\u0421",
+    "last_name": "\u0410\u0434\u044b\u043b\u043e\u0432\u0430",
+    "birth_date": null,
+    "avatar": "",
+    "address": "\u0421\u0443\u043a\u0443\u043b\u0443\u043a \u0443\u043b\u0438\u0446\u0430 \u0411 \u0434\u043e\u043c 68",
+    "is_deleted": false
+  }
+},
+{
+  "model": "phonebook.phonebook",
+  "pk": 7,
+  "fields": {
+    "first_name": "\u041e\u0440\u043e\u0441",
+    "patronymic": "\u0411",
+    "last_name": "\u0411\u0435\u043a\u0442\u0435\u043c\u0438\u0440\u043e\u0432",
+    "birth_date": null,
+    "avatar": "",
+    "address": "\u0413 \u041a\u0430\u043d\u0442 \u0443\u043b \u043f\u0435\u0440\u0432\u0430\u044f \u0434 25",
+    "is_deleted": false
+  }
+},
+{
+  "model": "phonebook.phonebook",
+  "pk": 8,
+  "fields": {
+    "first_name": "\u041c\u0430\u0440\u0438\u044f",
+    "patronymic": "\u0422",
+    "last_name": "\u0418\u0432\u0430\u043d\u043e\u0432\u0430",
+    "birth_date": "2021-02-10",
+    "avatar": "",
+    "address": "\u0433. \u041a\u0430\u0440\u0430-\u0411\u0430\u043b\u0442\u0430  \u0443\u043b. \u041b\u0438\u0442\u0435\u0439\u043d\u0430 \u0434. 24",
+    "is_deleted": false
+  }
+},
+{
+  "model": "phonebook.phonebook",
+  "pk": 9,
+  "fields": {
+    "first_name": "\u041d\u0430\u0437\u0433\u0443\u043b\u044c",
+    "patronymic": "\u0411",
+    "last_name": "\u0421\u0430\u0434\u044b\u043a\u043e\u0432\u0430",
+    "birth_date": null,
+    "avatar": "",
+    "address": "\u041a\u044b\u0440\u0433\u044b\u0437\u0441\u0442\u0430\u043d  Bishkek 4 dictrict",
+    "is_deleted": false
+  }
+},
+{
+  "model": "phonebook.phonebook",
+  "pk": 10,
+  "fields": {
+    "first_name": "\u0410\u0434\u0438\u043b\u0435\u0442",
+    "patronymic": "\u0422",
+    "last_name": "\u0422",
+    "birth_date": null,
+    "avatar": "",
+    "address": "\u041a\u044b\u0440\u0433\u044b\u0437\u0441\u0442\u0430\u043d  \u0433. \u0411\u0438\u0448\u043a\u0435\u043a 4 \u043c\u0438\u043a\u0440\u043e\u0440\u0430\u0439\u043e\u043d \u0434\u043e\u043c 29 \u043a\u0432\u0430\u0440\u0442\u0438\u0440\u0430 12",
+    "is_deleted": true
+  }
+},
+{
+  "model": "phonebook.phonebook",
+  "pk": 11,
+  "fields": {
+    "first_name": "\u041c\u0430\u043a\u0441\u0438\u043c",
+    "patronymic": "\u0420",
+    "last_name": "\u0411",
+    "birth_date": null,
+    "avatar": "",
+    "address": "\u0433. \u041a\u0430\u0440\u0430\u043a\u043e\u043b \u0443\u043b. \u0413\u043e\u0440\u044c\u043a\u043e\u0433\u043e \u0434. 78",
+    "is_deleted": true
+  }
+},
+{
+  "model": "phonebook.phonebook",
+  "pk": 12,
+  "fields": {
+    "first_name": "\u041d\u0430\u0434\u0435\u0436\u0434\u0430",
+    "patronymic": "\u041f",
+    "last_name": "\u0421",
+    "birth_date": "2021-02-17",
+    "avatar": "",
+    "address": "\u041a\u044b\u0440\u0433\u044b\u0437\u0441\u0442\u0430\u043d  \u0433. \u0411\u0438\u0448\u043a\u0435\u043a 4 \u043c\u0438\u043a\u0440\u043e\u0440\u0430\u0439\u043e\u043d \u0434\u043e\u043c 29 \u043a\u0432\u0430\u0440\u0442\u0438\u0440\u0430 12",
+    "is_deleted": true
+  }
+},
+{
+  "model": "phonebook.phonebook",
+  "pk": 13,
+  "fields": {
+    "first_name": "\u042d\u043c\u0438\u043b\u044c",
+    "patronymic": "\u0410",
+    "last_name": "\u0414",
+    "birth_date": "2000-02-11",
+    "avatar": "",
+    "address": "\u041f\u0435\u0442\u0440\u043e\u0432\u043a\u0430 \u0434125",
+    "is_deleted": false
+  }
+},
+{
+  "model": "phonebook.phonebook",
+  "pk": 14,
+  "fields": {
+    "first_name": "\u0410\u043c\u0438\u0440",
+    "patronymic": "\u0411",
+    "last_name": "\u0421",
+    "birth_date": "1995-02-27",
+    "avatar": "",
+    "address": "\u041a\u044b\u0440\u0433\u044b\u0437\u0441\u0442\u0430\u043d  \u0433. \u0411\u0438\u0448\u043a\u0435\u043a 4 \u043c\u0438\u043a\u0440\u043e\u0440\u0430\u0439\u043e\u043d \u0434\u043e\u043c 29 \u043a\u0432\u0430\u0440\u0442\u0438\u0440\u0430 12",
     "is_deleted": false
   }
 }
