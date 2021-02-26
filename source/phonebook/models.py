@@ -59,5 +59,5 @@ class PhoneBook(models.Model):
         return "{}. {}".format(self.pk, self.first_name)
 
     class Meta:
-        verbose_name = 'Запись в телефонной книге'
-        verbose_name_plural = 'Записи в телефонной книге'
+        verbose_name = 'Запись в телефонном справочнике'
+        verbose_name_plural = 'Записи в телефонном справочнике'
