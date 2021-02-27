@@ -25,16 +25,16 @@
             <div class="collapse navbar-collapse " id="navbarSupportedContent">
                 <ul class="navbar-nav navbar-txt mr-auto ">
                     <li class="nav-item active">
-                        <a class="nav-link" href="admin/">Admin </a>
+                        <a class="nav-link" id="admin" href="admin/">Admin </a>
                     </li>
                     {% block menu %}
                     {% endblock %}
                 </ul>
 
                 <div class="search-form">
-                    <form action="{% url 'book' %}" method="GET" class="d-inline-block" >
+                    <form action="{% url 'book' %}" id="search_form" method="GET" class="d-inline-block" >
                         {{ search_form.search }}
-                        <input type="submit" value="Поиск">
+                        <input type="submit" id="submit_search" value="Поиск">
                     </form>
                     <a href="/"><input formaction="{% url 'book' %}" type="button" value="Сброс"> </a>
                 </div>
